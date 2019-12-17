@@ -4,8 +4,8 @@
 #include <cmath>
 
 Circle::Circle(double r) {
-	if (r <= 0) {
-		r = 1;
+	if (r < 0) {
+		r = 0;
 	}
 	area = M_PI * pow(r, 2.);
 	ference = 2. * M_PI * r;
@@ -13,9 +13,9 @@ Circle::Circle(double r) {
 }
 
 Circle::Circle() {
-	area = M_PI;
-	ference = 2. * M_PI;
-	radius = 1;
+	area = 0;
+	ference = 0;
+	radius = 0;
 }
 
 void Circle::setArea(double value) {
