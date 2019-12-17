@@ -25,7 +25,11 @@ DateTime::DateTime(const DateTime& dateOrig) {
 }
 
 std::string DateTime::createDateString(tm dateStruct) {
-	return std::to_string(dateStruct.tm_mday) + " " + months[dateStruct.tm_mon] + " " + std::to_string(dateStruct.tm_year + 1900) + ", " + weekdays[dateStruct.tm_wday];
+	std::string dateStr = std::to_string(dateStruct.tm_mday) + " " + months[dateStruct.tm_mon] + " " + std::to_string(dateStruct.tm_year + 1900) + ", " + weekdays[dateStruct.tm_wday];
+	if (dateStruct.tm_mday < 10) {
+		return "0" + dateStr;
+	}
+	return dateStr;
 }
 
 std::string DateTime::getToday() {
