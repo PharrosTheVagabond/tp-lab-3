@@ -4,4 +4,5 @@
 
 int main() {
 	std::cout << calcDelta() << std::endl;
+	return 0;
 }
