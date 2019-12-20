@@ -3,6 +3,9 @@
 #include "DateTime.h"
 #include <ctime>
 
+const std::string DateTime::months[] = { "january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december" };
+const std::string DateTime::weekdays[] = { "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday" };
+
 DateTime::DateTime(unsigned day, unsigned month, unsigned year) {
 	date = {};
 	date.tm_mday = day;
